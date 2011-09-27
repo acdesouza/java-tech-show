@@ -34,8 +34,20 @@ public class BancoEJBTest {
 		BancoEJB bancoEJB = (BancoEJB) ctx.lookup("java:global/classes/BancoEJB!componentes.model.BancoEJB");
 		assertNotNull(bancoEJB);
 		
-		Conta clienteNovo = bancoEJB.criarConta(clienteSimples);
+		Conta contaNova = bancoEJB.criarConta(clienteSimples);
 		
-		assertNotNull(clienteNovo);
+		assertNotNull(contaNova);
+	}
+
+	@Test
+	public void deveCriarUmaContaAssociadaComCliente() throws NamingException {
+		Cliente clienteSimples = new Cliente("Antonio Carlos de Souza");
+		
+		BancoEJB bancoEJB = (BancoEJB) ctx.lookup("java:global/classes/BancoEJB!componentes.model.BancoEJB");
+		assertNotNull(bancoEJB);
+		
+		Conta contaNova = bancoEJB.criarConta(clienteSimples);
+		
+		assertNotNull(contaNova.getCliente());
 	}
 }
