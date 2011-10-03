@@ -6,6 +6,6 @@ import javax.ejb.Stateless;
 public class BancoEJB {
 
 	public Conta criarConta(Cliente cliente) {
-		return new Conta();
+		return new Conta(cliente);
 	}
 }
