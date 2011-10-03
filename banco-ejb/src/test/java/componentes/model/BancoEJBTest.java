@@ -1,5 +1,6 @@
 package componentes.model;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import javax.ejb.embeddable.EJBContainer;
@@ -42,12 +43,13 @@ public class BancoEJBTest {
 	@Test
 	public void deveCriarUmaContaAssociadaComCliente() throws NamingException {
 		Cliente clienteSimples = new Cliente("Antonio Carlos de Souza");
-		
+
 		BancoEJB bancoEJB = (BancoEJB) ctx.lookup("java:global/classes/BancoEJB!componentes.model.BancoEJB");
 		assertNotNull(bancoEJB);
-		
+
 		Conta contaNova = bancoEJB.criarConta(clienteSimples);
-		
+
 		assertNotNull(contaNova.getCliente());
+		assertEquals(clienteSimples, contaNova.getCliente());
 	}
 }
