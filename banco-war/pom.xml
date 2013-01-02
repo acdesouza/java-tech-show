@@ -21,7 +21,7 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- plugin>
 				<groupId>org.glassfish</groupId>
 				<artifactId>maven-embedded-glassfish-plugin</artifactId>
 				<version>3.0-74b</version>
@@ -40,7 +40,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin -->
 		</plugins>
 	</build>
 
