@@ -5,12 +5,13 @@
   		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
         http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>beyondclick</groupId>
-  <artifactId>beyondclick</artifactId>
+  <groupId>com.beyondclick</groupId>
+  <artifactId>java-tech-showcase</artifactId>
+  <description>Exemplo de uso de diversas tecnologias Java para aplicações web.</description>
   <packaging>pom</packaging>
   <version>1.0</version>
 
-  <name>Beyond Click</name>
+  <name>Java Tech Showcase</name>
   <url>http://beyondclick.wordpress.com</url>
 
   <build>
